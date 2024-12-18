@@ -1737,7 +1737,7 @@ if (typeof window == "object" && window.postMessage && !useragent.isOldIE) {
         };
 
         exports.addListener(win, "message", listener);
-        win.postMessage(messageName, "*");
+        win.postMessage(messageName, document.location.origin);
     };
 }
 
